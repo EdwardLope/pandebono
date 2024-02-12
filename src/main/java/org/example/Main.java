@@ -69,16 +69,27 @@ public class Main {
                         producyoSeleccionado=leer.nextInt();
                         switch (producyoSeleccionado){
                             case 1:
+                                System.out.println("Dijita cla cantidad de pandebono tradicional que deseas");
+                                cantidadTradicional=leer.nextInt();
                                 break;
                             case 2:
+                                System.out.println("Dijita cla cantidad de pandebono de guayaba que deseas");
+                                cantidadGuayaba=leer.nextInt();
                                 break;
                             case 3:
+                                System.out.println("Dijita cla cantidad de pandebono de arequipe que deseas");
+                                cantidadArequipe=leer.nextInt();
                                 break;
                             case 4:
+                                System.out.println("Dijita cla cantidad de pandebono de 7 quesos que deseas");
+                                cantidad7Quesos=leer.nextInt();
                                 break;
                             case 5:
+                                System.out.println("Dijita cla cantidad de bebidas que deseas");
+                                cantidadBebidas=leer.nextInt();
                                 break;
                             case 6:
+                                System.out.println("Orden terminada");
                                 break;
                             default:
                                 System.out.println("Opcion invalida");
@@ -87,12 +98,17 @@ public class Main {
                     }while (producyoSeleccionado!=6);
                     break;
                 case 2:
+                    Double totalSinPropina=((cantidadTradicional*8000.0)+(cantidadGuayaba*9500.0)+(cantidadArequipe*12000.0)+(cantidad7Quesos*20000.0)+(cantidadBebidas*9500.0));
+                    Double totalconPropina=((totalSinPropina)+(totalSinPropina*0.1));
                     break;
                 case 3:
+
                     break;
                 case 4:
+                    System.out.println("Compra terminada");
                     break;
                 default:
+                    System.out.println("Opcion invalida");
                     break;
 
             }
